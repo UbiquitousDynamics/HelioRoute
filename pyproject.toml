@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "helioroute"
+version = "0.1.0"
+description = "Solar-car route, weather, hazard, and telemetry strategy prototype"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+prototype = [
+  "numpy>=1.24,<3",
+  "requests>=2.31,<3",
+  "xarray>=2024.1",
+  "cfgrib>=0.9.10",
+]
+dev = [
+  "ruff>=0.6,<1",
+]
+
+[project.scripts]
+helioroute-map = "map_service:main"
+helioroute-sim = "vehicle_sim:main"
+helioroute-evaluate = "run_evaluation:main"
+
+[tool.setuptools]
+py-modules = [
+  "alert_policy",
+  "comm_scheduler",
+  "console_utils",
+  "geo_utils",
+  "kpi",
+  "map_service",
+  "mocks",
+  "profile_engine",
+  "road_hazards",
+  "run_evaluation",
+  "service_config",
+  "service_models",
+  "service_state",
+  "vehicle_sim",
+  "weather_providers",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+exclude = ["prototypes", "artifacts"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "B"]

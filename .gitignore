@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+dist/
+build/
+artifacts/
+
+# Generated evaluation and prototype dashboards
+perf_report.json
+perf_report.html
+prototypes/*.html
+prototypes/perf_report.json
+
