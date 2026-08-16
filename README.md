@@ -1,5 +1,9 @@
 # HelioRoute
 
+![HelioRoute web frontend showing the live route map, weather alerts, vehicle profile, and telemetry](pictures/screenshot.png)
+
+*HelioRoute's web frontend combines route conditions, weather alerts, vehicle performance, and live telemetry in a single dashboard.*
+
 HelioRoute is a route-awareness and strategy prototype for solar-powered vehicles.
 It turns a start point and destination into a live journey view that combines
 the road ahead, weather conditions, predicted vehicle performance, road
